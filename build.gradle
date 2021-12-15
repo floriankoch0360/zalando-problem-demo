@@ -1,0 +1,28 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.7'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.zalando:problem:0.26.0'
+	implementation 'org.zalando:jackson-datatype-problem:0.26.0'
+
+	// uncomment the following line to remove the warnings
+	// implementation 'org.apiguardian:apiguardian-api:1.1.2'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+	useJUnitPlatform()
+}
